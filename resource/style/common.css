@@ -208,3 +208,18 @@ html {
     color: white;
     background: var(--red);
 }
+
+.ipt {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    padding: 9px 4.5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: var(--vert);
+    background-color: var(--background-2);
+    backdrop-filter: blur(7px);
+    border: 2px solid var(--vert);
+    box-shadow: var(--shadow);
+}
