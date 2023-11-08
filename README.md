@@ -14,7 +14,8 @@ Couleurs
 - Blanc cassé : fbebce
 
 Police (google) : 
-- Playfair display
+- Playfair display (titres)
+- Limelight (texte)
 
 Agencement du site : 
 - Page d'accueil
