@@ -26,7 +26,7 @@
 
   .restaurant-map {
     width: 100%;
-    height: 500px; /* Example height */
+    height: 500px; 
     background-color: #fbebce;
     margin-top: 20px;
   }
@@ -41,7 +41,6 @@
     display: block;
   }
 
-  /* Additional styles can be added here */
 </style>
 </head>
 <body>
@@ -51,7 +50,7 @@
 </div>
 
 <div id="map" class="restaurant-map">
-  <!-- Ici, vous pouvez intégrer une carte interactive avec les restaurants -->
+  <!-- Ici, tu peux intégrer une carte interactive avec les restaurants -->
 </div>
 
 <div class="restaurant-details" id="details">
@@ -59,11 +58,11 @@
   <img src="image_du_restaurant.jpg" alt="Photo du Restaurant">
   <p>Menu et prix moyens ici</p>
   <p>Avis et notes ici</p>
-  <!-- Plus de détails ici -->
+  
 </div>
 
 <script>
-  // Ici, vous pouvez ajouter du JavaScript pour gérer les interactions
+  // Ici, tu peux ajouter du JavaScript pour gérer les interactions
 </script>
 
 </body>
