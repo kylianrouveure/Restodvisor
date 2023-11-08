@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 08 nov. 2023 à 13:59
+-- Généré le : mer. 08 nov. 2023 à 15:17
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `aliments` (
-  `ID_aliment` int(3) DEFAULT NULL,
+  `ID_aliment` int(3) NOT NULL,
   `Nom_aliment` varchar(65) DEFAULT NULL,
   `ID_type_allergene` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -180,7 +180,7 @@ INSERT INTO `aliments` (`ID_aliment`, `Nom_aliment`, `ID_type_allergene`) VALUES
 --
 
 CREATE TABLE `allergene` (
-  `ID_allergène` int(2) DEFAULT NULL,
+  `ID_allergène` int(2) NOT NULL,
   `Nom_allergène` varchar(44) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -207,7 +207,7 @@ INSERT INTO `allergene` (`ID_allergène`, `Nom_allergène`) VALUES
 --
 
 CREATE TABLE `avis` (
-  `id_avis` int(2) DEFAULT NULL,
+  `id_avis` int(2) NOT NULL,
   `avis` varchar(986) DEFAULT NULL,
   `note` int(1) DEFAULT NULL,
   `id_eta` int(1) DEFAULT NULL,
@@ -237,7 +237,7 @@ INSERT INTO `avis` (`id_avis`, `avis`, `note`, `id_eta`, `id_user`) VALUES
 --
 
 CREATE TABLE `etablissement` (
-  `ID_eta` int(2) DEFAULT NULL,
+  `ID_eta` int(2) NOT NULL,
   `Nom_eta` varchar(31) DEFAULT NULL,
   `Adresse_eta` varchar(20) DEFAULT NULL,
   `Code_postal_eta` int(5) DEFAULT NULL,
@@ -466,7 +466,7 @@ INSERT INTO `eta_plats` (`ID_eta`, `ID_plat`) VALUES
 --
 
 CREATE TABLE `plats` (
-  `Id_plat_boisson` int(2) DEFAULT NULL,
+  `Id_plat_boisson` int(2) NOT NULL,
   `Nom_plat_boisson` varchar(20) DEFAULT NULL,
   `Id_type_plat` int(1) DEFAULT NULL,
   `Prix` int(2) DEFAULT NULL
@@ -488,36 +488,41 @@ INSERT INTO `plats` (`Id_plat_boisson`, `Nom_plat_boisson`, `Id_type_plat`, `Pri
 (9, 'Antipasti', 1, 35),
 (10, 'Tiramisu', 3, 38),
 (11, 'Sushi', 1, 28),
+(12, 'Pates', 1, 10),
 (13, 'Sashimi', 1, 19),
 (14, 'Ramen', 2, 22),
 (15, 'Poulet Tempura', 1, 10),
 (16, 'Poulet Curry', 1, 15),
-(18, 'Poulet Tandoori', 1, 11),
-(19, 'Naan', 2, 40),
-(20, 'Coq au vin', 1, 18),
-(22, 'Boeuf bourguignon', 1, 26),
-(23, 'Escargots', 2, 12),
-(24, 'Tacos', 2, 20),
-(26, 'Enchiladas', 2, 16),
-(27, 'Guacamole', 2, 18),
-(28, 'Margarita', 4, 20),
-(29, 'Viandes grillées', 1, 21),
-(30, 'Martini', 4, 5),
-(32, 'Mojito', 4, 8),
-(33, 'Whisky sour', 4, 5),
-(34, 'Caipirinha', 4, 10),
-(35, 'Piña colada', 4, 13),
-(36, 'Tequila sunrise', 4, 5),
-(37, 'Cosmopolitan', 4, 14),
-(38, 'Old Fashioned', 4, 15),
-(39, 'Manhattan', 4, 6),
-(40, 'Daiquiri', 4, 5),
-(41, 'Blue Lagoon', 4, 5),
-(42, 'Long Island Iced Tea', 4, 9),
-(43, 'Sazerac', 4, 11),
-(44, 'Paloma', 4, 12),
-(45, 'Mint Julep', 4, 12),
-(46, 'White Russian', 4, 14);
+(17, 'Poulet Tandoori', 1, 11),
+(18, 'Naan', 2, 40),
+(19, 'Coq au vin', 1, 18),
+(20, 'Boeuf bourguignon', 1, 26),
+(21, 'Escargots', 2, 12),
+(22, 'Tacos', 2, 20),
+(23, 'Enchiladas', 2, 16),
+(24, 'Guacamole', 2, 18),
+(25, 'Margarita', 4, 20),
+(26, 'Viandes grillées', 1, 21),
+(27, 'Martini', 4, 5),
+(28, 'Mojito', 4, 8),
+(29, 'Whisky sour', 4, 5),
+(30, 'Caipirinha', 4, 10),
+(31, 'Piña colada', 4, 13),
+(32, 'Tequila sunrise', 4, 5),
+(33, 'Cosmopolitan', 4, 14),
+(34, 'Old Fashioned', 4, 15),
+(35, 'Manhattan', 4, 6),
+(36, 'Daiquiri', 4, 5),
+(37, 'Blue Lagoon', 4, 5),
+(38, 'Long Island Iced Tea', 4, 9),
+(39, 'Sazerac', 4, 11),
+(40, 'Paloma', 4, 12),
+(41, 'Mint Julep', 4, 12),
+(42, 'White Russian', 4, 14),
+(43, 'Flan', 3, 4),
+(44, 'Monaco', 4, 8),
+(45, 'Whysky sec', 4, 10),
+(46, 'Rhum vodka', 4, 12);
 
 -- --------------------------------------------------------
 
@@ -1249,37 +1254,39 @@ INSERT INTO `plats_aliments` (`ID_plats`, `ID_Aliments`) VALUES
 --
 
 CREATE TABLE `reservation` (
-  `id_reservation` int(2) DEFAULT NULL,
+  `id_reservation` int(2) NOT NULL,
   `date` varchar(10) DEFAULT NULL,
   `heure` varchar(5) DEFAULT NULL,
-  `nombre_ind` int(1) DEFAULT NULL
+  `nombre_ind` int(1) DEFAULT NULL,
+  `id_etat_resa` int(2) DEFAULT NULL,
+  `id_user_resa` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `reservation`
 --
 
-INSERT INTO `reservation` (`id_reservation`, `date`, `heure`, `nombre_ind`) VALUES
-(1, '05/07/2023', '12:10', 2),
-(2, '06/07/2023', '13:10', 3),
-(3, '07/07/2023', '12:10', 2),
-(4, '08/07/2023', '13:10', 4),
-(5, '09/07/2023', '12:10', 2),
-(6, '10/07/2023', '13:10', 5),
-(7, '11/07/2023', '12:10', 3),
-(8, '12/07/2023', '13:10', 5),
-(9, '13/07/2023', '20:10', 6),
-(10, '14/07/2023', '21:10', 3),
-(11, '15/07/2023', '12:10', 4),
-(12, '16/07/2023', '13:10', 2),
-(13, '17/07/2023', '12:10', 6),
-(14, '18/07/2023', '13:10', 7),
-(15, '19/07/2023', '12:10', 3),
-(16, '20/07/2023', '13:10', 4),
-(17, '21/07/2023', '12:10', 1),
-(18, '22/07/2023', '13:10', 5),
-(19, '23/07/2023', '12:10', 3),
-(20, '24/07/2023', '13:10', 2);
+INSERT INTO `reservation` (`id_reservation`, `date`, `heure`, `nombre_ind`, `id_etat_resa`, `id_user_resa`) VALUES
+(1, '05/07/2023', '12:10', 2, 7, 11),
+(2, '06/07/2023', '13:10', 3, 1, 8),
+(3, '07/07/2023', '12:10', 2, 10, 18),
+(4, '08/07/2023', '13:10', 4, 1, 3),
+(5, '09/07/2023', '12:10', 2, 5, 1),
+(6, '10/07/2023', '13:10', 5, 2, 8),
+(7, '11/07/2023', '12:10', 3, 9, 10),
+(8, '12/07/2023', '13:10', 5, 2, 7),
+(9, '13/07/2023', '20:10', 6, 4, 10),
+(10, '14/07/2023', '21:10', 3, 4, 7),
+(11, '15/07/2023', '12:10', 4, 2, 15),
+(12, '16/07/2023', '13:10', 2, 1, 17),
+(13, '17/07/2023', '12:10', 6, 3, 11),
+(14, '18/07/2023', '13:10', 7, 9, 1),
+(15, '19/07/2023', '12:10', 3, 6, 17),
+(16, '20/07/2023', '13:10', 4, 8, 9),
+(17, '21/07/2023', '12:10', 1, 4, 16),
+(18, '22/07/2023', '13:10', 5, 10, 15),
+(19, '23/07/2023', '12:10', 3, 4, 9),
+(20, '24/07/2023', '13:10', 2, 8, 19);
 
 -- --------------------------------------------------------
 
@@ -1288,7 +1295,7 @@ INSERT INTO `reservation` (`id_reservation`, `date`, `heure`, `nombre_ind`) VALU
 --
 
 CREATE TABLE `spécialités` (
-  `Id_specialités` int(2) DEFAULT NULL,
+  `Id_specialités` int(2) NOT NULL,
   `Nom_spécialité` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -1321,7 +1328,7 @@ INSERT INTO `spécialités` (`Id_specialités`, `Nom_spécialité`) VALUES
 --
 
 CREATE TABLE `type_eta` (
-  `ID_type_eta` int(1) DEFAULT NULL,
+  `ID_type_eta` int(1) NOT NULL,
   `Nom_eta` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -1340,7 +1347,7 @@ INSERT INTO `type_eta` (`ID_type_eta`, `Nom_eta`) VALUES
 --
 
 CREATE TABLE `type_plats` (
-  `ID_type_plats` int(1) DEFAULT NULL,
+  `ID_type_plats` int(1) NOT NULL,
   `Type_plat` varchar(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -1361,7 +1368,7 @@ INSERT INTO `type_plats` (`ID_type_plats`, `Type_plat`) VALUES
 --
 
 CREATE TABLE `type_user` (
-  `id_type_user` int(1) DEFAULT NULL,
+  `id_type_user` int(1) NOT NULL,
   `type_user` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -1380,7 +1387,7 @@ INSERT INTO `type_user` (`id_type_user`, `type_user`) VALUES
 --
 
 CREATE TABLE `user` (
-  `id_user` int(2) DEFAULT NULL,
+  `id_user` int(2) NOT NULL,
   `id_type_user` int(1) DEFAULT NULL,
   `nom_user` varchar(8) DEFAULT NULL,
   `prenom_user` varchar(7) DEFAULT NULL,
@@ -1417,6 +1424,219 @@ INSERT INTO `user` (`id_user`, `id_type_user`, `nom_user`, `prenom_user`, `mail_
 (18, 2, 'Dupont', 'Tom', 'manonlaurent432@gmail.com', 24, 759859834, '45,30821', '4,872884', 'Non'),
 (19, 1, 'Lambert', 'Lola', 'ethandurand123@example.com', 46, 684679981, '46,075171', '2,54898', 'Non'),
 (20, 2, 'Nguyen', 'Ethan', 'leamartin333@yahoo.com', 46, 606419987, '44,824783', '2,183356', 'Non');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `aliments`
+--
+ALTER TABLE `aliments`
+  ADD PRIMARY KEY (`ID_aliment`);
+
+--
+-- Index pour la table `allergene`
+--
+ALTER TABLE `allergene`
+  ADD PRIMARY KEY (`ID_allergène`);
+
+--
+-- Index pour la table `avis`
+--
+ALTER TABLE `avis`
+  ADD PRIMARY KEY (`id_avis`),
+  ADD KEY `id_eta` (`id_eta`),
+  ADD KEY `id_user` (`id_user`);
+
+--
+-- Index pour la table `etablissement`
+--
+ALTER TABLE `etablissement`
+  ADD PRIMARY KEY (`ID_eta`),
+  ADD KEY `ID_type` (`ID_type`),
+  ADD KEY `id_specialites_plats` (`id_specialites_plats`);
+
+--
+-- Index pour la table `eta_plats`
+--
+ALTER TABLE `eta_plats`
+  ADD KEY `ID_eta` (`ID_eta`),
+  ADD KEY `ID_plat` (`ID_plat`);
+
+--
+-- Index pour la table `plats`
+--
+ALTER TABLE `plats`
+  ADD PRIMARY KEY (`Id_plat_boisson`),
+  ADD KEY `Id_type_plat` (`Id_type_plat`);
+
+--
+-- Index pour la table `plats_aliments`
+--
+ALTER TABLE `plats_aliments`
+  ADD KEY `ID_plats` (`ID_plats`),
+  ADD KEY `ID_Aliments` (`ID_Aliments`);
+
+--
+-- Index pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id_reservation`),
+  ADD KEY `id_user_resa` (`id_user_resa`),
+  ADD KEY `id_etat_resa` (`id_etat_resa`);
+
+--
+-- Index pour la table `spécialités`
+--
+ALTER TABLE `spécialités`
+  ADD PRIMARY KEY (`Id_specialités`);
+
+--
+-- Index pour la table `type_eta`
+--
+ALTER TABLE `type_eta`
+  ADD PRIMARY KEY (`ID_type_eta`);
+
+--
+-- Index pour la table `type_plats`
+--
+ALTER TABLE `type_plats`
+  ADD PRIMARY KEY (`ID_type_plats`);
+
+--
+-- Index pour la table `type_user`
+--
+ALTER TABLE `type_user`
+  ADD PRIMARY KEY (`id_type_user`);
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_type_user` (`id_type_user`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `aliments`
+--
+ALTER TABLE `aliments`
+  MODIFY `ID_aliment` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+
+--
+-- AUTO_INCREMENT pour la table `allergene`
+--
+ALTER TABLE `allergene`
+  MODIFY `ID_allergène` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `avis`
+--
+ALTER TABLE `avis`
+  MODIFY `id_avis` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `etablissement`
+--
+ALTER TABLE `etablissement`
+  MODIFY `ID_eta` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `plats`
+--
+ALTER TABLE `plats`
+  MODIFY `Id_plat_boisson` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `id_reservation` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT pour la table `spécialités`
+--
+ALTER TABLE `spécialités`
+  MODIFY `Id_specialités` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT pour la table `type_eta`
+--
+ALTER TABLE `type_eta`
+  MODIFY `ID_type_eta` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `type_plats`
+--
+ALTER TABLE `type_plats`
+  MODIFY `ID_type_plats` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `type_user`
+--
+ALTER TABLE `type_user`
+  MODIFY `id_type_user` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `avis`
+--
+ALTER TABLE `avis`
+  ADD CONSTRAINT `avis_ibfk_1` FOREIGN KEY (`id_eta`) REFERENCES `etablissement` (`ID_eta`),
+  ADD CONSTRAINT `avis_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+
+--
+-- Contraintes pour la table `etablissement`
+--
+ALTER TABLE `etablissement`
+  ADD CONSTRAINT `etablissement_ibfk_1` FOREIGN KEY (`ID_type`) REFERENCES `type_eta` (`ID_type_eta`),
+  ADD CONSTRAINT `etablissement_ibfk_2` FOREIGN KEY (`id_specialites_plats`) REFERENCES `spécialités` (`Id_specialités`);
+
+--
+-- Contraintes pour la table `eta_plats`
+--
+ALTER TABLE `eta_plats`
+  ADD CONSTRAINT `eta_plats_ibfk_1` FOREIGN KEY (`ID_eta`) REFERENCES `etablissement` (`ID_eta`),
+  ADD CONSTRAINT `eta_plats_ibfk_2` FOREIGN KEY (`ID_plat`) REFERENCES `plats` (`Id_plat_boisson`);
+
+--
+-- Contraintes pour la table `plats`
+--
+ALTER TABLE `plats`
+  ADD CONSTRAINT `plats_ibfk_1` FOREIGN KEY (`Id_type_plat`) REFERENCES `type_plats` (`ID_type_plats`);
+
+--
+-- Contraintes pour la table `plats_aliments`
+--
+ALTER TABLE `plats_aliments`
+  ADD CONSTRAINT `plats_aliments_ibfk_1` FOREIGN KEY (`ID_plats`) REFERENCES `plats` (`Id_plat_boisson`),
+  ADD CONSTRAINT `plats_aliments_ibfk_2` FOREIGN KEY (`ID_Aliments`) REFERENCES `aliments` (`ID_aliment`);
+
+--
+-- Contraintes pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`id_user_resa`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `reservation_ibfk_2` FOREIGN KEY (`id_etat_resa`) REFERENCES `etablissement` (`ID_eta`);
+
+--
+-- Contraintes pour la table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_type_user`) REFERENCES `type_user` (`id_type_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
