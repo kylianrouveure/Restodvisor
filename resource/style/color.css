@@ -1,4 +1,7 @@
 :root {
     --text-color: black;
-    --background: rgb(234, 236, 241);
+    --background: #fbebce;
+
+    --vert: #003400;
+    --Jaune: #ffcc00;
 }
