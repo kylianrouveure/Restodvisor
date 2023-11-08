@@ -11,7 +11,7 @@
                 }
                 else { echo 'Lyon (69)'; }
             ?></div>
-            <div class="icon-btn" >
+            <div class="icon-btn" onclick="document.getElementById('localisation-popup').style.display = 'none'"  >
                 <span class="material-symbols-outlined" id="header-icon" >location_on</span>
             </div>
         </div>
@@ -41,9 +41,12 @@
     if(isset($_SESSION['user']) && $_SESSION['user'] != '') {
         ?>
             <div id="user-dropdown" >
-                <div>Mon profil</div>
-                <div>Mon établissement</div>
-                <div class="off" >Déconnexion</div>
+                <div class="btn-user" >Mon profil</div>
+                <div class="btn-user" >Mon établissement</div>
+                <div class="btn-user off" onclick="document.location.href = 'resource/code/log/code.php';" style="background-color:var(--red-2);" >Déconnexion</div>
+                <div class="btn-user off" onclick="document.getElementById('user-dropdown').style.display = 'none'" style="background-color:var(--red-2);" >
+                    Fermer <span class="material-symbols-outlined" >close</span>
+                </div>
             </div>
         <?php
     }
@@ -84,13 +87,23 @@
         z-index: 99;
         top: 110px;
         right: 30px;
-        padding: 10px;
         width: 20%;
         background-color: var(--background-2);
         backdrop-filter: blur(7px);
         border-radius: 20px;
         box-shadow: var(--shadow);
+        overflow: hidden;
     }
+    .content {
+        padding: 10px;
+    }
+    .btn-user {
+        padding: 20px;
+        background-color: var(--background-2);
+    }
+        .btn-user:hover {
+            filter: brightness(80%);
+        }
     .sbt {
         width: 100%;
         border: none;
@@ -106,7 +119,7 @@
         float: right;
         font-size: 12px;
         padding: 5px;
-        margin: 0 10px 0px 0;
+        margin: 10px 10px 0px 0;
         border-radius: 20px;
         background-color: var(--red-2);
         backdrop-filter: blur(5px);
@@ -116,14 +129,17 @@
 
 
 <!-- POPUP VILLE -->
-<div id="popup" >
+<div id="localisation-popup" >
     <input class="local" type="text" placeholder="Rechercher un établissement/profil ..." />
     <div class="list-cards" >
         <div class="card" >
-            User
+            Tout Lyon (69)
         </div>
         <div class="card" >
-            User
+            Lyon (69001)
+        </div>
+        <div class="card" >
+            Lyon (69002)
         </div>
     </div>
 </div>
