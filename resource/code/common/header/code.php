@@ -18,10 +18,11 @@
 
         <?php 
             if(isset($_SESSION['user']) && $_SESSION['user'] != '') {
-                $pdp = "resource/image/logo/icon/image.ico";
+                $pdp = "resource/image/logo/icon/image.png";
                 ?>
-                    <div onclick="document.getElementById('user-dropdown').style.display = 'block'" class="btn-on" style="padding-bottom: 15px;" >
-                        <img class="logo" src="<?php echo $logo; ?>" alt="logo" />
+                    <div class="btn" onclick="document.getElementById('user-dropdown').style.display = 'block'" >
+                        <?php echo $_SESSION['user']; ?>
+                        <img class="pdp_3" src="<?php echo $pdp; ?>" alt="logo" />
                     </div>
                 <?php
             }

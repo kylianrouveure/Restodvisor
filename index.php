@@ -10,7 +10,6 @@
     <body>
         <?php
             require_once "required/include-content.php";
-
             require_once "resource/code/home/include.php";
         ?>
     </body>

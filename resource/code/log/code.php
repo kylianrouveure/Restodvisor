@@ -2,7 +2,7 @@
     session_start();
 
     $_SESSION['user'] = "Hugo";
-    $_SESSION['localisation'] = "Paris 1er (75001)";
+    $_SESSION['localisation'] = "Tout Lyon (69)";
 
     $redirectURL = '../../../';
 

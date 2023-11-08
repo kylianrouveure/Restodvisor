@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
         $lang = substr(strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']), 0, 2);
         switch ($lang) {
@@ -21,4 +23,7 @@
     else {
         $lang = 'en';
     }
+
+	require_once "resource/code/bdd.php";
+	require_once "resource/code/data.php";
 ?>
