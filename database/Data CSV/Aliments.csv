@@ -1,0 +1,135 @@
+﻿ID_aliment;Nom_aliment;ID_type_allergene
+1;Gin;10
+2;Vodka;0
+3;Vermouth;1
+4;Olive;3
+5;Citron vert;4
+6;Sel;3
+7;Rhum;1
+8;Menthe;10
+9;Sucre;9
+10;Jus de citron;7
+11;Curaçao bleu;7
+12;Limonade;8
+13;Cachaça;1
+14;Lait de coco;6
+15;Jus d'ananas;4
+16;Glace pilée;0
+17;Tequila;5
+18;Jus de pamplemousse;6
+19;Soda au pamplemousse;2
+20;Vodka;4
+21;Cointreau;4
+22;Jus de canneberge;1
+23;Whisky;3
+24;Angostura bitters;6
+25;Zeste d'orange;6
+26;Zeste de citron;3
+27;Martini;2
+28;Margarita;8
+29;Mojito;9
+30;Whisky sour;4
+31;Caipirinha;9
+32;Piña colada;0
+33;Tequila sunrise;0
+34;Cosmopolitan;0
+35;Old Fashioned;8
+36;Manhattan;2
+37;Daiquiri;4
+38;Blue Lagoon;3
+39;Long Island Iced Tea;0
+40;Sazerac;3
+41;Paloma;6
+42;Mint Julep;5
+43;White Russian;5
+44;Canard laqué;10
+45;Crêpes;10
+46;Légumes marinés;8
+47;Sauce hoisin;8
+48;Nouilles;7
+49;Viande/fruit de mer;4
+50;Dim sum;6
+51;Raviolis vapeur;6
+52;Boulettes;7
+53;Pâtisseries farcies;1
+54;Moussaka;10
+55;Aubergines;7
+56;Viande hachée;3
+57;Tomates;5
+58;Béchamel;10
+59;Souvlaki;6
+60;Pain pita;7
+61;Légumes;4
+62;Sauce tzatziki;4
+63;Pâtes;4
+64;Spaghetti;7
+65;Penne;7
+66;Fettuccine;7
+67;Pizza;0
+68;Pâte à pizza;7
+69;Sauce tomate;1
+70;Fromage;0
+71;Ingrédients variés;2
+72;Antipasti;3
+73;Olives;6
+74;Fromages;0
+75;Charcuteries;6
+76;Légumes marinés;3
+77;Tiramisu;8
+78;Biscuits imbibés de café;0
+79;Mascarpone;0
+80;Cacao en poudre;0
+81;Sushi;9
+82;Boulettes de riz vinaigré;8
+83;Poisson cru;7
+84;Légumes;1
+85;Gingembre mariné;8
+86;Sauce soja;5
+87;Wasabi;6
+88;Sashimi;5
+89;Tranches fines de poisson cru;1
+90;Ramen;6
+91;Soupe de nouilles;4
+92;Garnitures diverses (porc, œufs, légumes);10
+93;Poulet Tempura;0
+94;Morceaux de poulet enrobés de pâte à tempura, frits;2
+95;Poulet Curry;9
+96;Poulet;6
+97;Sauce épicée au curry;9
+98;Poulet Tandoori;7
+99;Morceaux de poulet marinés dans une sauce au yaourt et aux épices;6
+100;Cuits dans un four tandoor;10
+101;Naan;7
+102;Pain plat indien cuit dans un four tandoor;5
+103;Coq au vin;9
+104;Poulet mijoté dans du vin rouge;5
+105;Champignons;4
+106;Oignons;8
+107;Lardons;10
+108;Boeuf bourguignon;10
+109;Bœuf mijoté dans du vin rouge;3
+110;Légumes;9
+111;Herbes;7
+112;Escargots;2
+113;Escargots de terre cuits au beurre;5
+114;À l'ail;7
+115;Aux herbes;3
+116;Servis dans leur coquille;4
+117;Tacos;7
+118;Tortillas;1
+119;Viande (bœuf, porc, poulet);4
+120;Légumes;6
+121;Sauce;0
+122;Enchiladas;1
+123;Tortillas farcies;8
+124;Viande;9
+125;Fromage;7
+126;Haricots;10
+127;Sauce;5
+128;Guacamole;3
+129;Avocat;9
+130;Tomate;2
+131;Oignon;10
+132;Coriandre;0
+133;Jus de citron vert;8
+134;Épices;6

@@ -1,0 +1,42 @@
+﻿Id_plat_boisson;Nom_plat_boisson;Id_type_plat;Prix
+1;Canard laqué;1;22
+2;Nouilles sautées;1;38
+3;Dim sum;1;27
+4;Moussaka;2;29
+5;Souvlaki;2;50
+6;Gyros;1;22
+7;Pâtes;1;17
+8;Pizza;1;41
+9;Antipasti;1;35
+10;Tiramisu;3;38
+11;Sushi;1;28
+13;Sashimi;1;19
+14;Ramen;2;22
+15;Poulet Tempura;1;10
+16;Poulet Curry;1;15
+18;Poulet Tandoori;1;11
+19;Naan;2;40
+20;Coq au vin;1;18
+22;Boeuf bourguignon;1;26
+23;Escargots;2;12
+24;Tacos;2;20
+26;Enchiladas;2;16
+27;Guacamole;2;18
+28;Margarita;4;20
+29;Viandes grillées;1;21
+30;Martini;4;5
+32;Mojito;4;8
+33;Whisky sour;4;5
+34;Caipirinha;4;10
+35;Piña colada;4;13
+36;Tequila sunrise;4;5
+37;Cosmopolitan;4;14
+38;Old Fashioned;4;15
+39;Manhattan;4;6
+40;Daiquiri;4;5
+41;Blue Lagoon;4;5
+42;Long Island Iced Tea;4;9
+43;Sazerac;4;11
+44;Paloma;4;12
+45;Mint Julep;4;12
+46;White Russian;4;14
