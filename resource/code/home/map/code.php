@@ -11,7 +11,7 @@
     // Fonction d'initialisation de la carte
     function initMap() {
         // Créer une carte centrée avec un zoom initial
-        var map = L.map('map').setView([48.8566, 2.3522], 13); // Coordonnées de Paris, France
+        var map = L.map('map').setView([45.755898, 4.847817], 13); // Coordonnées de Paris, France
         
         // Ajouter une couche de tuiles OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
