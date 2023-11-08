@@ -22,7 +22,7 @@
             .search .list-cards .card {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
-                grid-gap: 10px;
+                grid-gap: 2px;
 
                 /* grid-column: 2 / 6;
                 padding: 10px;
@@ -37,6 +37,9 @@
                 backdrop-filter: blur(7px);
                 box-shadow: var(--shadow);
             }
+                .search .list-cards .card {
+                    
+                }
 </style>
 
 <div class="search">
@@ -44,10 +47,16 @@
     <div class="list-cards" >
         <div class="card" >
             <div class="card-header" >
-                <div class="btn" >
+                <div class="card-btn" >
+                    <span class="material-symbols-outlined" id="icon" >storefront</span> 
+                </div>
+
+                <div class="card-btn" >
+                    <span class="material-symbols-outlined" id="icon" >bar_chart</span> 
                     15 visites
                 </div>
-                <div class="btn" >
+
+                <div class="card-btn-on" >
                     Voir la carte
                 </div>
             </div>
@@ -57,10 +66,9 @@
             <div class="card-info" >
                 <div>Bistro du coin</div>
                 <div>Traditionnel • Français</div>
-                <div>Animé</div>
                 <div>Entre 10 - 20€</div>
                 <div>
-                    4,5 <span class="material-symbols-outlined" id="header-icon" >star</span> 
+                    4,5 <span class="material-symbols-outlined selected" id="icon" >star</span> 
                     (15 avis)
                 </div>
             </div>
