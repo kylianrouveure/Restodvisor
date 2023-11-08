@@ -1,10 +1,11 @@
-1;La Mère Léa.;1 Rue Hugues Guerin;69008;789539111;2
-2;L'Acteur.;2 Rue Hugues Guerin;69008;789539112;2
-3;La Mère Brazier.;3 Rue Hugues Guerin;69008;789539113;1
-4;Bouchon Tupin.;4 Rue Hugues Guerin;69008;789539114;1
-5;L'Auberge du Pont de Collonges.;5 Rue Hugues Guerin;69008;789539115;2
-6;La Cuisinerie.;6 Rue Hugues Guerin;69008;789539116;2
-7;Les Apothicaires.;7 Rue Hugues Guerin;69008;789539117;1
-8;La Table Wei.;8 Rue Hugues Guerin;69008;789539118;1
-9;Chez Hugon;9 Rue Hugues Guerin;69008;789539119;1
-10;L'instant;10 Rue Hugues Guerin;69008;789539120;1
+ID_eta;Nom_eta;Adresse_eta;Code_postal_eta;numero_eta;ID_type;Horaires;id_specialites_plats;capacite;id_user_proprio;GPS_X;GPS_Y;mobilit� reduite
+1;La Mère Léa.;1 Rue Hugues Guerin;69008;789539111;2;10h30 - 22h30;14;600;5;45.716329;4.992807;Oui
+2;L'Acteur.;2 Rue Hugues Guerin;69008;789539112;2;11h30 - 14h30;7;400;9;45.730426;4.884724;Oui
+3;La Mère Brazier.;3 Rue Hugues Guerin;69008;789539113;1;11h00 - 22h00;2;300;10;45.781556;4.865206;Oui
+4;Bouchon Tupin.;4 Rue Hugues Guerin;69008;789539114;1;18h30 - 23h30;4;800;16;45.749734;4.916659;Oui
+5;L'Auberge du Pont de Collonges.;5 Rue Hugues Guerin;69008;789539115;2;20h00 - 00h00;4;500;18;45.707334;4.811276;Oui
+6;La Cuisinerie.;6 Rue Hugues Guerin;69008;789539116;2;10h30 - 22h30;16;100;20;45.788806;4.873708;Non
+7;Les Apothicaires.;7 Rue Hugues Guerin;69008;789539117;1;11h30 - 21h30;16;300;20;45.782974;4.960187;Non
+8;La Table Wei.;8 Rue Hugues Guerin;69008;789539118;1;11h30 - 21h30;9;400;9;45.755491;4.919716;Non
+9;Chez Hugon;9 Rue Hugues Guerin;69008;789539119;1;11h30 - 14h30;8;100;10;45.757289;4.867039;Oui
+10;L'instant;10 Rue Hugues Guerin;69008;789539120;1;18h30 - 23h30;8;700;16;45.720675;4.911209;Oui
