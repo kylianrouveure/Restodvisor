@@ -1,7 +1,11 @@
 :root {
     --text-color: black;
-    --background: #fbebce;
 
+    --background: #fbebce;
+    --background-2: #fbebceCE;
+
+    --red: #B03A2E;
     --vert: #003400;
+    --vert-2: #003400CE;
     --Jaune: #ffcc00;
 }

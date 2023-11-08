@@ -203,3 +203,8 @@ html {
 .classic-transition {
     transition:.3s;
 }
+
+.off {
+    color: white;
+    background: var(--red);
+}
