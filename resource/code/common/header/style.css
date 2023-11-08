@@ -1,13 +1,14 @@
 .header {
     position: fixed;
+    z-index: 99;
     top: 0;
     left: 0;
     right: 0;
     height: 60px;
     padding: 20px;
     background-color: var(--vert-2);
-    backdrop-filter: opacity(0.7);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(7px);
+    box-shadow: var(--shadow);
 }
     .logo {
         height: 100%;
