@@ -4,6 +4,9 @@ Site internet d'avis des restaurants
 
 Charte graphique
 
+lien Figma : 
+https://www.figma.com/file/abqGu1SebbnOFqAqXGlkqS/Untitled?type=design&node-id=2%3A17&mode=design&t=1NolBIY1bDgb6zo1-1
+
 Couleurs
 
 - Vert : 003400
