@@ -9,5 +9,5 @@
     --vert-2: #003400AA;
     --Jaune: #ffcc00;
 
-    --shadow-element: 0 1px 5px 0 rgba(0, 0, 0, 0.8), 0 5px 8px 0 rgba(0, 0, 0, 0.8);
+    --shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 5px 8px 0 rgba(0, 0, 0, 0.3);
 }
