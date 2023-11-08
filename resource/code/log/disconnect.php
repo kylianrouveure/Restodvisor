@@ -1,8 +1,8 @@
 <?php
     session_start();
 
-    $_SESSION['user'] = "Hugo";
-    $_SESSION['localisation'] = "Tout Lyon (69)";
+    $_SESSION['user'] = null;
+    $_SESSION['localisation'] = null;
 
     $redirectURL = '../../../';
 
