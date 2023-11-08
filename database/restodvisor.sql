@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 08 nov. 2023 à 09:36
+-- Généré le : mer. 08 nov. 2023 à 10:03
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -51,6 +51,58 @@ INSERT INTO `etablissement` (`Id_eta`, `nom_eta`, `adresse_eta`, `code_postale_e
 (8, 'La Table Wei.', '8 Rue Hugues Guerin', '69008', '789539118', 1),
 (9, 'Chez Hugon', '9 Rue Hugues Guerin', '69008', '789539119', 1),
 (10, 'L\'instant', '10 Rue Hugues Guerin', '69008', '789539120', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `spécialités`
+--
+
+CREATE TABLE `spécialités` (
+  `Id_specialités` int(2) DEFAULT NULL,
+  `Nom_spécialité` varchar(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Déchargement des données de la table `spécialités`
+--
+
+INSERT INTO `spécialités` (`Id_specialités`, `Nom_spécialité`) VALUES
+(1, 'Chinois'),
+(2, 'Grec'),
+(3, 'Italien'),
+(4, 'Japonais'),
+(5, 'Indien'),
+(6, 'Français'),
+(7, 'Mexicain'),
+(8, 'Barbecue'),
+(9, 'Vegan'),
+(10, 'Vegetarien '),
+(11, 'Cocktails'),
+(12, 'Vins'),
+(13, 'Irlandais'),
+(14, 'Karaoké'),
+(15, 'Tapas'),
+(16, 'Whisky');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `type_eta`
+--
+
+CREATE TABLE `type_eta` (
+  `ID_type_eta` int(1) DEFAULT NULL,
+  `Nom_eta` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Déchargement des données de la table `type_eta`
+--
+
+INSERT INTO `type_eta` (`ID_type_eta`, `Nom_eta`) VALUES
+(1, 'Bar'),
+(2, 'Restaurant');
 
 --
 -- Index pour les tables déchargées
